@@ -10,11 +10,11 @@ provider:
   environment:
     DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
  
-functions:
-  generateRandomNumber:
-    handler: src/handler.generateRandomNumber
-    timeout: 60 #sec
-    memorySize: 128 #mb
+# functions:
+#   generateRandomNumber:
+#     handler: src/handler.generateRandomNumber
+#     timeout: 60 #sec
+#     memorySize: 128 #mb
 
 custom:
   postsTableName: posts-table-${self:provider.stage}
